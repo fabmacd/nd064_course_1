@@ -31,9 +31,13 @@ def metrics():
 @app.route("/")
 def hello():
     ## log line main
-    logging.basicConfig(filename='app.log', level=logging.DEBUG)
+    app.logger.info('Main request successful')
     
     return "Hello World!"
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    
+    ## stream logs to a file
+    logging.basicConfig(filename='app.log', level=logging.DEBUG)
+    
+    app.run(host='0.0.0.0', port=8080)
