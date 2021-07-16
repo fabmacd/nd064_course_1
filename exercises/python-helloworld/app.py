@@ -14,7 +14,7 @@ def status():
     ## log line status
     app.logger.info('status request successful')
     
-    returne response
+    return response
     
 @app.route("/metrics")
 def metrics():
