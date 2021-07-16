@@ -4,7 +4,7 @@ import logging
 
 app = Flask(__name__)
 
-@app.route("/staus")
+@app.route("/status")
 def status():
     response = app.response_class(
         response=json.dumps({"result":"OK - health"}),
